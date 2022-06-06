@@ -26,5 +26,6 @@ class Afspraak extends Model
     protected $klant_id = 'int';
     protected $klant_opmerking = 'text';
     protected $factuur_betaald = 'bool';
+    protected $factuur_id = 'int';
 
 }
