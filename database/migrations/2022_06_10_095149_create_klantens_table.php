@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('klant_postcode');
             $table->string('klant_woonplaats');
             $table->string('klant_email');
-            $table->integer('rank_id');
+            $table->integer('rank_id')->default(3);
         });
     }
 

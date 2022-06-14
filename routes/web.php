@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\KlantenController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('customer/create', [KlantenController::class, 'index']);
+Route::post('customer/create', [KlantenController::class, 'create']);
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -29,4 +33,5 @@ Route::middleware([
     Route::get('/payment', function () {
         return view('payment');
     })->name('payment');
+
 });
