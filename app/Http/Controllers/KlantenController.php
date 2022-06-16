@@ -41,10 +41,9 @@ class KlantenController extends Controller
         'klant_huisnummer' => 'required',
         'klant_postcode' => 'required',
         'klant_woonplaats' => 'required',
-        'klant_email' => 'required'
+        'klant_email' => 'required|unique:klantens',
         ]);
 
-//        dd($request);
         $klant = new Klanten();
         $klant->klant_voornaam = request('klant_voornaam');
         $klant->klant_tussenvoegsel = request('klant_tussenvoegsel');
@@ -55,10 +54,7 @@ class KlantenController extends Controller
         $klant->klant_postcode = request('klant_postcode');
         $klant->klant_woonplaats = request('klant_woonplaats');
         $klant->klant_email = request('klant_email');
-//        $klant->user_id = auth()->user()->id;
         $klant->save();
-
-//        return $request->input();
 
         return redirect('/customer/create');
     }

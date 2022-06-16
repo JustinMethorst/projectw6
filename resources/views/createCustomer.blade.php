@@ -18,43 +18,61 @@
         </ul>
     </div>
 @endif
-<form action="create" method="post">
+<form action="/customer/create" method="post">
     @csrf
     <div class="form-group">
-        <label for="firstName">Voornaam</label>
-        <input type="text" class="form-control" name="klant_voornaam" placeholder="First Name">
+        <label for="firstName">
+            Voornaam
+            <input type="text" class="form-control" name="klant_voornaam" placeholder="First Name">
+        </label>
     </div>
     <div class="form-group">
-        <label for="middleName">Tussenvoegsel</label>
-        <input type="text" class="form-control" name="klant_tussenvoegsel" placeholder="Middle Name">
+        <label for="middleName">
+            Tussenvoegsel
+            <input type="text" class="form-control" name="klant_tussenvoegsel" placeholder="Middle Name">
+        </label>
     </div>
     <div class="form-group">
-        <label for="lastName">Achternaam</label>
-        <input type="text" class="form-control" name="klant_achternaam" placeholder="Last Name">
+        <label for="lastName">
+            Achternaam
+            <input type="text" class="form-control" name="klant_achternaam" placeholder="Last Name">
+        </label>
     </div>
     <div class="form-group">
-        <label for="mobileNumber">Mobiel Nummer</label>
-        <input type="tel" class="form-control" name="klant_mobiel" placeholder="Mobile Number">
+        <label for="mobileNumber">
+            Mobiel Nummer
+            <input type="tel" class="form-control" name="klant_mobiel" placeholder="Mobile Number">
+        </label>
     </div>
     <div class="form-group">
-        <label for="straatnaam">Straatnaam</label>
-        <input type="text" class="form-control" name="klant_straatnaam" placeholder="Straatnaam">
+        <label for="straatnaam">
+            Straatnaam
+            <input type="text" class="form-control" name="klant_straatnaam" placeholder="Straatnaam">
+        </label>
     </div>
     <div class="form-group">
-        <label for="huisnummer">Huisnummer</label>
-        <input type="number" class="form-control" name="klant_huisnummer" placeholder="Huisnummer">
+        <label for="huisnummer">
+            Huisnummer
+            <input type="number" class="form-control" name="klant_huisnummer" placeholder="Huisnummer">
+        </label>
     </div>
     <div class="form-group">
-        <label for="postcode">Postcode</label>
-        <input type="text" class="form-control" name="klant_postcode" placeholder="Postcode">
+        <label for="postcode">
+            Postcode
+            <input type="text" class="form-control" name="klant_postcode" placeholder="Postcode">
+        </label>
     </div>
     <div class="form-group">
-        <label for="woonplaats">Woonplaats</label>
-        <input type="text" class="form-control" name="klant_woonplaats" placeholder="Woonplaats">
+        <label for="woonplaats">
+            Woonplaats
+            <input type="text" class="form-control" name="klant_woonplaats" placeholder="Woonplaats">
+        </label>
     </div>
     <div class="form-group">
-        <label for="email">E-mail</label>
-        <input type="email" class="form-control" name="klant_email" placeholder="E-mail">
+        <label for="email">
+            E-mail
+            <input type="email" class="form-control" name="klant_email" placeholder="E-mail">
+        </label>
     </div>
 
     <input type="submit" value="Submit">

@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AfspraakController;
 use App\Http\Controllers\KlantenController;
+use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +23,9 @@ Route::get('/', function () {
 Route::get('customer/create', [KlantenController::class, 'index']);
 Route::post('customer/create', [KlantenController::class, 'create']);
 
+Route::get('afspraak', [AfspraakController::class, 'index']);
+Route::get('afspraak/payment', [AfspraakController::class, 'paymentView']);
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -30,8 +35,8 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 
-    Route::get('/payment', function () {
-        return view('payment');
-    })->name('payment');
+//    Route::get('/payment', function () {
+//        return view('payment');
+//    })->name('payment');
 
 });

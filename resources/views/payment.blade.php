@@ -8,7 +8,16 @@
     <title>Payment</title>
 </head>
 <body>
-    <h1>Betaal Pagina</h1>
+<h1>Betaal Pagina</h1>
+<form action="update" method="post">
+    @csrf
+    <label>
+        <input type="text" name="amount" placeholder="Bedrag">
+    </label>
+    <input type="submit" value="Betaal">
 
+    @foreach($query as $quer){ {{$quer->datum_afspraak}} {{$quer->klant_id}} }
+        @endforeach
+</form>
 </body>
 </html>
