@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      *
@@ -21,7 +20,7 @@ return new class extends Migration
             $table->time('tijd_afspraak');
             $table->text('afspraak_opmerking');
             $table->enum('afspraak_status', ['open', 'afgewezen', 'bevestigd'])->default('open');
-            $table->enum('afspraak_type', ['afspraak', 'vergadering'])->default('afspraak');
+            $table->enum('afspraak_type', ['kleine beurt', 'grote beurt', 'reparatie'])->default('kleine beurt');
             $table->integer('monteur_id');
             $table->integer('klant_id');
             $table->text('klant_opmerking');

@@ -23,6 +23,12 @@ class CreateNewUser implements CreatesNewUsers
         Validator::make($input, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'achternaam' => ['required', 'string', 'max:255'],
+            'mobiel' => ['required', 'string', 'max:15'],
+            'straatnaam' => ['required', 'string', 'max:255'],
+            'huisnummer' => ['required', 'string', 'max:4'],
+            'postcode' => ['required', 'string', 'max:6'],
+            'woonplaats' => ['required', 'string', 'max:255'],
             'password' => $this->passwordRules(),
             'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['accepted', 'required'] : '',
         ])->validate();
@@ -30,6 +36,12 @@ class CreateNewUser implements CreatesNewUsers
         return User::create([
             'name' => $input['name'],
             'email' => $input['email'],
+            'achternaam' => $input['achternaam'],
+            'mobiel' => $input['mobiel'],
+            'straatnaam' => $input['straatnaam'],
+            'huisnummer' => $input['huisnummer'],
+            'postcode' => $input['postcode'],
+            'woonplaats' => $input['woonplaats'],
             'password' => Hash::make($input['password']),
         ]);
     }

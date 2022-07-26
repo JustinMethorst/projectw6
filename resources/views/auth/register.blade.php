@@ -19,6 +19,41 @@
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
 
+            <div>
+                <x-jet-label for="tussenvoegsel" value="{{ __('tussenvoegsel') }}" />
+                <x-jet-input id="tussenvoegsel" class="block mt-1 w-full" type="text" name="tussenvoegsel" :value="old('name')" autofocus autocomplete="name" />
+            </div>
+
+            <div>
+                <x-jet-label for="achternaam" value="{{ __('achternaam') }}" />
+                <x-jet-input id="achternaam" class="block mt-1 w-full" type="text" name="achternaam" :value="old('name')" required autofocus autocomplete="name" />
+            </div>
+
+            <div>
+                <x-jet-label for="mobiel" value="{{ __('mobiel') }}" />
+                <x-jet-input id="mobiel" class="block mt-1 w-full" type="text" name="mobiel" :value="old('name')" required autofocus autocomplete="name" />
+            </div>
+
+            <div>
+                <x-jet-label for="straatnaam" value="{{ __('straatnaam') }}" />
+                <x-jet-input id="straatnaam" class="block mt-1 w-full" type="text" name="straatnaam" :value="old('name')" required autofocus autocomplete="name" />
+            </div>
+
+            <div>
+                <x-jet-label for="huisnummer" value="{{ __('huisnummer') }}" />
+                <x-jet-input id="huisnummer" class="block mt-1 w-full" type="text" name="huisnummer" :value="old('name')" required autofocus autocomplete="name" />
+            </div>
+
+            <div>
+                <x-jet-label for="postcode" value="{{ __('postcode') }}" />
+                <x-jet-input id="postcode" class="block mt-1 w-full" type="text" name="postcode" :value="old('name')" required autofocus autocomplete="name" />
+            </div>
+
+            <div>
+                <x-jet-label for="woonplaats" value="{{ __('woonplaats') }}" />
+                <x-jet-input id="woonplaats" class="block mt-1 w-full" type="text" name="woonplaats" :value="old('name')" required autofocus autocomplete="name" />
+            </div>
+
             <div class="mt-4">
                 <x-jet-label for="password" value="{{ __('Password') }}" />
                 <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />

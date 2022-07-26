@@ -18,15 +18,13 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
 
-            $table->string('klant_voornaam');
-            $table->string('klant_tussenvoegsel')->nullable();
-            $table->string('klant_achternaam');
-            $table->string('klant_mobiel', 10);
-            $table->string('klant_straatnaam');
-            $table->string('klant_huisnummer');
-            $table->string('klant_postcode');
-            $table->string('klant_woonplaats');
-            $table->string('klant_email');
+            $table->string('tussenvoegsel')->nullable();
+            $table->string('achternaam');
+            $table->string('mobiel', 15);
+            $table->string('straatnaam');
+            $table->string('huisnummer');
+            $table->string('postcode');
+            $table->string('woonplaats');
             $table->integer('rank_id')->default(3);
 
             $table->timestamp('email_verified_at')->nullable();

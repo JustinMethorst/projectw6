@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ['as' => 'home_path', 'uses' => function () {
+    return view('createCustomer');
+}]);
 
 Route::get('customer/create', [KlantenController::class, 'index']);
 Route::post('customer/create', [KlantenController::class, 'create']);
